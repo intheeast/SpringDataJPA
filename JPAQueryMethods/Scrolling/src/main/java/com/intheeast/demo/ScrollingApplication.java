@@ -48,7 +48,7 @@ public class ScrollingApplication {
 
             List<User> users = new ArrayList<>();
 
-            for (int i = 0; i < 50; i++) {
+            for (int i = 0; i < 500; i++) {
                 String firstName = firstNameList.get(random.nextInt(firstNameList.size()));
                 String lastName = lastNameList.get(random.nextInt(lastNameList.size()));
                 Integer age = ageList.get(random.nextInt(ageList.size()));

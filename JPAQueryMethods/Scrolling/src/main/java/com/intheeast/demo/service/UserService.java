@@ -71,9 +71,11 @@ public class UserService {
     // Keyset-Filtering 기반 스크롤링 처리 (WindowIterator 사용)
     public List<UserDTO> getUsersWithWindowIterator(int ageThreshold) {
 
-        WindowIterator<User> iterator = WindowIterator.of((ScrollPosition position) -> 
-            userRepository.findByAgeGreaterThanOrderByAgeAsc(ageThreshold, (KeysetScrollPosition) position))
-        .startingAt(ScrollPosition.keyset());
+        WindowIterator<User> iterator = WindowIterator.of(
+        		(ScrollPosition position) -> 
+        		userRepository.findByAgeGreaterThanOrderByAgeAsc(
+        				ageThreshold, (KeysetScrollPosition) position))
+        		.startingAt(ScrollPosition.keyset());
 
         List<UserDTO> result = new ArrayList<>();
         iterator.forEachRemaining(user -> result.add(UserDTO.fromEntity(user)));
