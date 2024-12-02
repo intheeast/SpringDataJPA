@@ -1,5 +1,5 @@
 # [Spring Data JPA](https://docs.spring.io/spring-data/jpa/reference/jpa.html)
-
+Spring Data JPA 3.4.0 공식 문서 예제들을 구현했습니다.
 
 ## Section Summary
 - Getting Started
