@@ -5,7 +5,7 @@
 - Getting Started
 - Core concepts
 - Defining Repository Interfaces
-- Configuration
+- [Configuration](https://github.com/intheeast/SpringDataJPA/tree/main/Configuration)
 - Persisting Entities
 - Defining Query Methods
 - JPA Query Methods 
